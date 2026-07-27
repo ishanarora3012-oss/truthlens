@@ -9,6 +9,7 @@ from backend.database.repository import AssessmentRepository
 from backend.explainability.lime_explainer import LimeExplainer
 from backend.services.assessment_engine import EvidenceGroundedAssessmentEngine
 from backend.services.evidence_retrieval import EvidenceRetriever
+from backend.services.lexical_resources import load_lexical_resources
 
 
 class HallucinationService:
@@ -21,7 +22,10 @@ class HallucinationService:
     def __init__(self, settings: Settings, session: Session | None = None) -> None:
         self._session = session
         self._retriever = EvidenceRetriever(settings.knowledge_base_path)
-        self._engine = EvidenceGroundedAssessmentEngine(settings.hallucination_threshold)
+        resources = load_lexical_resources(settings.synonyms_path, settings.safe_words_path)
+        self._engine = EvidenceGroundedAssessmentEngine(
+            settings.hallucination_threshold, resources
+        )
         self._explainer = LimeExplainer()
 
     def assess(self, request: CheckRequest, persist: bool = True) -> CheckResponse:

@@ -1,0 +1,25 @@
+{
+  "description": "Curated synonym groups for dependency-free lexical matching. Each group lists mutually interchangeable surface forms; matching is symmetric. Replace or augment with embedding-based similarity for open-domain coverage.",
+  "groups": [
+    ["usa", "us", "america", "united states"],
+    ["uk", "britain", "united kingdom"],
+    ["car", "automobile", "vehicle"],
+    ["big", "large", "huge", "enormous"],
+    ["small", "little", "tiny"],
+    ["fast", "quick", "rapid"],
+    ["language", "lang"],
+    ["framework", "library", "toolkit"],
+    ["programming", "coding", "software"],
+    ["capital", "capitol"],
+    ["city", "town", "metropolis"],
+    ["satellite", "moon"],
+    ["author", "writer", "novelist"],
+    ["film", "movie", "picture"],
+    ["doctor", "physician"],
+    ["buy", "purchase"],
+    ["begin", "start", "commence"],
+    ["end", "finish", "conclude"],
+    ["help", "assist", "aid"],
+    ["show", "display", "present"]
+  ]
+}

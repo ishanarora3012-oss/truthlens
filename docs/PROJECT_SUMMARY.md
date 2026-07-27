@@ -9,7 +9,10 @@ baseline and application platform—not as a guarantee of factual correctness.
 - FastAPI API with typed OpenAPI contracts.
 - Local curated knowledge-base retrieval plus caller-provided trusted context.
 - Transparent baseline scoring based on lexical semantic similarity, answer
-  coverage, and numeric-claim mismatch.
+  coverage, curated synonym-aware matching, safe-word filtering, and
+  numeric-, named-entity-, and technical-token mismatch signals.
+- An offline, database-free benchmark CLI that scores a labeled dataset and
+  reports accuracy, precision, recall, F1, and latency.
 - Calibrated, bounded confidence and explicit "insufficient evidence" behavior.
 - Token-support explanation compatible with future LIME/SHAP/attention adapters.
 - SQLite-by-default history persistence; PostgreSQL is supported through Docker.
@@ -30,6 +33,8 @@ low confidence rather than declaring an answer factual.
 
 - Replace `EvidenceRetriever` with a vector store, enterprise search, or web
   retrieval provider that preserves provenance.
+- Replace curated synonyms with Sentence Transformer embedding similarity for
+  open-domain paraphrase and contradiction detection.
 - Replace `EvidenceGroundedAssessmentEngine` with a calibrated fine-tuned BERT,
   RoBERTa, DeBERTa, or DistilBERT classifier.
 - Attach SHAP/LIME explanations to a selected trained model.

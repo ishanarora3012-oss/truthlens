@@ -17,6 +17,8 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     hallucination_threshold: float = 0.60
     knowledge_base_path: str = "data/knowledge_base.json"
+    synonyms_path: str = "data/synonyms.json"
+    safe_words_path: str = "data/safe_words.txt"
 
     model_config = SettingsConfigDict(env_file=".env", env_prefix="TRUTHLENS_", extra="ignore")
 

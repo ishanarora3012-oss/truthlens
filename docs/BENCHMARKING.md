@@ -24,20 +24,22 @@ python -m backend.evaluation.cli experiments/sample_dataset.csv
 
 ```text
 Samples:       10
-Accuracy:      70.00%
+Accuracy:      80.00%
 Precision:     100.00%
-Recall:        40.00%
-F1:            57.14%
-Mean latency:  0.11 ms
-P95 latency:   0.10 ms
+Recall:        60.00%
+F1:            75.00%
+Mean latency:  0.13 ms
+P95 latency:   0.12 ms
 ```
 
-These numbers are the transparent baseline, not a target. High precision with
-lower recall is expected: the baseline flags named-entity and numeric mismatches
-confidently but misses hallucinations that are lexically close to the evidence
-(for example `CO2` versus `H2O`). The benchmark exists to quantify that gap and
-to measure the synonym-aware matching and fine-tuned classifier phases against a
-fixed baseline.
+These numbers are the transparent baseline, not a target. Synonym-aware matching,
+safe-word filtering, and a technical-token mismatch signal raised recall from an
+earlier 40% (named-entity and numeric signals only) to 60% while holding
+precision at 100%. The two remaining misses in the sample set are semantic
+contradictions with no lexical novelty—a single named-entity substitution in an
+otherwise supported sentence, and an antonym/domain-term swap. Closing that gap
+is the goal of the embedding-similarity and fine-tuned classifier phases, which
+this benchmark measures against the fixed lexical baseline.
 
 Add `--json` for machine-readable output suitable for CI dashboards or paper
 tables. Evaluate every model on the same held-out split and retain dataset

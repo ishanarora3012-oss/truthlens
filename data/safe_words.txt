@@ -1,0 +1,35 @@
+# Generic terms excluded from unsupported-claim scoring. One entry per line;
+# blank lines and lines starting with '#' are ignored. These words carry little
+# factual weight, so their absence from evidence should not signal hallucination.
+thing
+things
+stuff
+kind
+type
+sort
+part
+piece
+example
+way
+ways
+number
+amount
+lot
+lots
+group
+set
+item
+items
+place
+area
+side
+form
+case
+point
+fact
+idea
+information
+detail
+details
+feature
+features
