@@ -1,0 +1,1 @@
+"""BERT classifier adapter placeholder."""
