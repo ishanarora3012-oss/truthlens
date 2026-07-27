@@ -23,6 +23,7 @@ artifacts/
 checkpoints/
 *.pt
 *.bin
+*.db
 
 # Frontend
 frontend/node_modules/

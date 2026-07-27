@@ -1,8 +1,9 @@
-"""SHAP explanation adapter placeholder."""
+"""SHAP adapter boundary for trained classifier integrations."""
 
 
 class ShapExplainer:
-    """Produce feature-attribution explanations with SHAP.
+    """Lazy boundary for model-specific SHAP explanations."""
 
-    TODO: implement model-specific SHAP explainers and serialization.
-    """
+    def explain(self) -> None:
+        """Reserve the trained-model SHAP integration point."""
+        raise RuntimeError("SHAP explanations require a configured trained classifier.")

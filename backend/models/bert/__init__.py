@@ -1,1 +1,1 @@
-"""BERT classifier adapter placeholder."""
+"""BERT classifier adapter."""

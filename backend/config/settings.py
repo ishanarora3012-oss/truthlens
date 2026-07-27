@@ -15,6 +15,8 @@ class Settings(BaseSettings):
     database_url: str = "postgresql+psycopg://truthlens:truthlens@localhost:5432/truthlens"
     cors_origins: str = "http://localhost:5173"
     log_level: str = "INFO"
+    hallucination_threshold: float = 0.60
+    knowledge_base_path: str = "data/knowledge_base.json"
 
     model_config = SettingsConfigDict(env_file=".env", env_prefix="TRUTHLENS_", extra="ignore")
 

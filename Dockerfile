@@ -10,6 +10,7 @@ RUN useradd --create-home --shell /usr/sbin/nologin appuser
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY backend ./backend
+COPY data ./data
 COPY pyproject.toml .
 
 USER appuser

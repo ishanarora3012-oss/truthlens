@@ -1,1 +1,1 @@
-"""DistilBERT classifier adapter placeholder."""
+"""DistilBERT classifier adapter."""

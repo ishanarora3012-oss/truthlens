@@ -1,1 +1,1 @@
-"""DeBERTa classifier adapter placeholder."""
+"""DeBERTa classifier adapter."""

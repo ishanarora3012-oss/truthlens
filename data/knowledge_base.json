@@ -1,0 +1,32 @@
+[
+  {
+    "id": "france-capital",
+    "title": "France",
+    "content": "Paris is the capital and most populous city of France.",
+    "source": "https://www.britannica.com/place/Paris"
+  },
+  {
+    "id": "earth-moon",
+    "title": "Moon",
+    "content": "The Moon is Earth's only natural satellite.",
+    "source": "https://science.nasa.gov/moon/"
+  },
+  {
+    "id": "water-formula",
+    "title": "Water",
+    "content": "Water is a chemical compound with the formula H2O.",
+    "source": "https://www.usgs.gov/special-topics/water-science-school/science/water-properties"
+  },
+  {
+    "id": "python-language",
+    "title": "Python",
+    "content": "Python is a high-level, general-purpose programming language.",
+    "source": "https://www.python.org/doc/essays/blurb/"
+  },
+  {
+    "id": "fastapi",
+    "title": "FastAPI",
+    "content": "FastAPI is a modern Python web framework for building APIs based on standard Python type hints.",
+    "source": "https://fastapi.tiangolo.com/"
+  }
+]

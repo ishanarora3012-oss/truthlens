@@ -1,1 +1,1 @@
-"""RoBERTa classifier adapter placeholder."""
+"""RoBERTa classifier adapter."""

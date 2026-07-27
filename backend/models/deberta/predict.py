@@ -1,10 +1,10 @@
-"""DeBERTa inference entry point placeholder."""
+"""DeBERTa inference entry point."""
+
+from pathlib import Path
+
+from backend.models.transformer_classifier import predict_probability
 
 
-def predict(question: str, answer: str) -> float:
-    """Predict hallucination probability with DeBERTa.
-
-    TODO: load a versioned DeBERTa checkpoint and run batched inference.
-    """
-    del question, answer
-    raise NotImplementedError
+def predict(question: str, answer: str, checkpoint_dir: str = "artifacts/deberta") -> float:
+    """Predict hallucination probability with a saved DeBERTa classifier."""
+    return predict_probability(question, answer, Path(checkpoint_dir))

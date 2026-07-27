@@ -2,4 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TODO: implement the dashboard design system and responsive layouts. */
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #e7edf7; background: #09111f; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+.shell { width: min(1180px, calc(100% - 2rem)); margin: auto; padding: 4rem 0 2rem; }
+.hero { max-width: 720px; margin-bottom: 2rem; }.hero h1 { font-size: clamp(3rem, 8vw, 6rem); letter-spacing: -.08em; margin: .2rem 0; }
+.hero > p:last-child { color: #9eafc8; font-size: 1.1rem; }.eyebrow { color: #72d6bb; text-transform: uppercase; font-size: .73rem; font-weight: 800; letter-spacing: .12em; }
+.workspace { display: grid; grid-template-columns: minmax(300px, .85fr) minmax(400px, 1.15fr); gap: 1.25rem; }.card { background: #111d30; border: 1px solid #233653; border-radius: 18px; padding: 1.35rem; box-shadow: 0 18px 50px #0003; }
+label { display: grid; color: #ced9e9; font-size: .9rem; font-weight: 700; gap: .5rem; margin-bottom: 1rem; } label span { color: #8092ad; font-weight: 400; } textarea { min-height: 105px; resize: vertical; background: #091425; color: #eef5ff; border: 1px solid #2b4265; border-radius: 9px; padding: .75rem; font: inherit; } button { width: 100%; border: 0; border-radius: 9px; padding: .85rem; background: #72d6bb; color: #062018; font-weight: 900; cursor: pointer; } button:disabled { opacity: .55; cursor: not-allowed; }
+.empty { color: #9eafc8; text-align: center; padding: 5rem 1rem; }.score-row { display: flex; align-items: center; gap: 1.5rem; }.score { --score: 0%; border-radius: 50%; width: 140px; aspect-ratio: 1; display: grid; place-content: center; text-align: center; background: radial-gradient(#111d30 58%, transparent 60%), conic-gradient(#72d6bb var(--score), #293b58 0); }.score.risk { background: radial-gradient(#111d30 58%, transparent 60%), conic-gradient(#ff806b var(--score), #293b58 0); }.score strong { font-size: 2.2rem; }.score span { font-size: .7rem; color: #9eafc8; }.score-row h2 { margin: .3rem 0; }.metrics { display: flex; gap: 2rem; border-block: 1px solid #233653; padding: 1rem 0; }.metrics div { display: grid; gap: .3rem; }.metrics dt { color: #9eafc8; font-size: .8rem; }.metrics dd { margin: 0; font-size: 1.4rem; font-weight: 800; }.token-groups, .evidence { background: #0b1728; border-radius: 9px; padding: .75rem 1rem; margin: .65rem 0; }.token-groups p { margin: .35rem 0; }.evidence p { color: #c4d0df; margin: .4rem 0; }.evidence a { color: #72d6bb; font-size: .85rem; }.error { color: #ff9b89; } footer { color: #71849f; text-align: center; margin-top: 2rem; font-size: .8rem; }
+@media (max-width: 800px) { .workspace { grid-template-columns: 1fr; }.score-row { align-items: flex-start; }.shell { padding-top: 2rem; } }
